@@ -1,0 +1,110 @@
+* {
+  /*  sets the default margin and padding of all HTML elements to 0 */
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  /*makes the navigation bar move along scrolling*/
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  /*nav bar specification*/
+  max-width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Adds a semi-transparent background color to the navigation bar */
+  margin-top: -63px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  /*makes the navigation bar links to the same line*/
+}
+
+nav ul li a {
+  display: block;
+  padding: 20px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #0000006d;
+  /*hover effect for nav bar*/
+  border-radius: 5px;
+}
+
+.active {
+  border-bottom: 3px solid white;
+  /*decoration for the page user is active on*/
+}
+
+header img {
+  /*business logo specification*/
+  width: 150px;
+  height: 50px;
+  position: sticky;
+  top: 8px;
+  padding: 5px 40px;
+  z-index: 1;
+}
+
+body {
+  /*common webpage appearence*/
+  font-family: "Trebuchet MS";
+  background-position: center;
+  background-size: cover;
+  background-image: url(background.jpg);
+  backdrop-filter: blur(4px);
+}
+
+footer {
+  /*footer specification*/
+  margin-top: 40px;
+  background-color: #000000;
+  padding: 25px;
+  text-align: center;
+}
+
+footer .logo {
+  /*position of the logo on the footer*/
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+footer img {
+  max-width: 100px;
+}
+
+footer i {
+  color: white;
+  font-size: 20px;
+}
+
+/*go to top icon specification*/
+#go-to-top {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  float: left;
+}
+
+#go-to-top img {
+  width: 50px;
+  height: 50px;
+}

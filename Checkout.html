@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout </title>
+	<link rel="icon" type="image/x-icon" href="favi.ico">
+    <!-- custom css file link  -->
+	
+    <link rel="stylesheet" href="external.css">
+	<link rel="stylesheet" href="pageeditor.css">
+
+	<style>
+	
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+body{
+	background-image: url(final.jpg);
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+ 
+}
+
+.container form{
+  padding:20px;
+  width:700px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  
+}
+
+.container form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.container form .row .col{
+  flex:1 1 250px;
+}
+
+.container form .row .col .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .col .inputBox{
+  margin:15px 0;
+}
+
+.container form .row .col .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container form .row .col .inputBox input{
+  width: 100%;
+  border:2px solid #ccc;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.container form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.container form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.container form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn{
+  width: 100%;
+  padding:12px;
+  font-size: 17px;
+  background: #353937;
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.container form .submit-btn:hover{
+  background:rgb(114, 113, 110)
+}
+
+.message{
+	width: 400px;
+	background:#fff ;
+	border-radius: 6px;
+	position: absolute;
+	top:0%;
+	left:50%;
+	transform: translate(-50%,-50%) scale(0.1);
+	text-align: center;
+	padding:0 30px 30px;
+	visibility: hidden;
+	transition:transform 0.4s,top 0.4s;
+}
+.message img{
+	width: 100px;
+	margin-top: -50px;
+	border-radius:50%;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.message h2{
+	font-size: 38px;
+	font-weight: 500;
+	margin:30px 0 10px;
+
+}
+.message button{
+	width: 100%;
+	margin-top: 50px;
+	padding:10px 0;
+	background: #3caf75;
+	color: #fff;
+	border: 0;
+	outline:none;
+	font-size: 18px;
+	border-radius: 4px;
+	cursor:pointer;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	
+}
+.open-message{
+	visibility: visible;
+	top:50%;
+	transform: translate(-50%,-50%) scale(1);
+	
+
+}
+</style>
+</head>
+<body>
+<header>
+	<a href="index.html">
+		<img src="newlogo.png" alt="Explore UAE Logo">
+	</a>
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="comments.html">Comments</a></li>
+			<li><a href="package.html" class="active">Shop</a></li>
+			<li><a href="#">Quiz</a></li>
+			<li><a href="#">Site Map</a></li>
+			<li><a href="#">Gallery</a></li>
+			<li><a href="#">About Us</a></li>
+		</ul>
+	</nav>
+</header>
+
+
+
+<div class="container">
+
+    <form method="post" enctype="text/plain" action="mailto:nafla.20220352@gmail.com " onsubmit="openmessage()">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">Guest Details</h3>
+
+                <div class="inputBox">
+                    <span>Firste Name :</span>
+                    <input type="text" name="Fisrt Name" placeholder="Tony" required>
+                </div>
+				<div class="inputBox">
+                    <span>Lash Name :</span>
+                    <input type="text" name="Last Name"  placeholder="Chris" required>
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" name="email" placeholder="Enter your email address">
+
+                </div>
+                <div class="inputBox">
+                    <span>Country</span>
+                    <select name="country" id="country" required style="border: 10px;">
+						<option value="">--------------------------------Select------------------------------</option>
+						<option value="Australia" >Australia</option>
+						<option value="Belarus">Belarus</option>
+						<option value="Canada">Canada</option>
+						<option value="China">China</option>
+						<option value="Egypt">Egypt</option>
+						<option value="Germany">Germany</option>
+						<option value="India">India</option>
+						<option value="Indonesia">Indonesia</option>
+						<option value="Iran">Iran</option>
+						<option value="Iraq">Iraq</option>
+						<option value="Italy">Italy</option>
+						<option value="South Korea">South Korea</option>
+						<option value="Maldives">Maldives</option>
+						<option value="Morocco">Morocco</option>
+						<option value="Nigeria">Nigeria</option>
+						<option value="Oman">Oman</option>
+						<option value="Pakistan">Pakistan</option>
+						<option value="Qatar">Qatar</option>
+						<option value="Russia">Russia</option>
+						<option value="Saudi Arabia">Saudi Arabia</option>
+						<option value="South Africa">South Africa</option>
+						<option value="Spain">Spain</option>
+						<option value="Sri Lanka">Sri Lanka</option>
+						<option value="Thailand">Thailand</option>
+					</select>
+                </div>
+                <div class="inputBox">
+                    <span>Mobile</span>
+                    <input type="text" id="mobile" class="Mobile" placeholder="+123456789" required>
+                </div>
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">payment</h3>
+
+                <div class="inputBox">
+                    <span>cards accepted :</span>
+                    <img src="card_img.png" alt="cards">
+                </div>
+                <div class="inputBox">
+                    <label>name:</label>
+                    <input type="text" name="Name" placeholder="mr.Tony Chris" required>
+                </div>
+                <div class="inputBox">
+                    <span>card number :</span>
+                    <input type="number" name="Card Number" placeholder="1111-2222-3333-4444" required>
+                </div>
+                <div class="inputBox">
+                    <span>exp month :</span>
+                    <input type="text" name="exp month" placeholder="March" required>
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>exp year :</span>
+                        <input type="number" name="exp year" placeholder="2023" required>
+                    </div> 
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="123" required>
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+
+    <button type="submit" value="Confirm payment" class="submit-btn" >pay</button>
+	<div class="message" id="message">
+		<img src="additional.png" alt="popup messagelogo">
+		<h2>THANK YOU!</h2>
+		<P>Hope you enjoy the journey!</P>
+		<button type="button" onclick="redirectToHomepage()">done</button>
+		</div>
+	</form>
+  
+</div>
+<div class="pg">
+    <a href="pg.html">
+      <h3>Page editor</h3>
+    </a>
+  </div>
+  <footer>
+    <div>
+      <div class="logo">
+        <img src="logo-footer.png" alt="Your logo">
+      </div>
+    <div>
+        <p class="para">&copy; 2023 All rights reserved.</p> <!---html entity reference for copyright symbol -->
+    </div>
+	</div>
+  </footer>
+<script>
+	const countrySelect = document.getElementById('country');
+	const mobileInput = document.getElementById('mobile');
+
+	// Define country codes for each country
+	const countryCodes = {
+		'Australia': '+61',
+		'Belarus': '+375',
+		'Canada': '+1',
+		'China': '+86',
+		'Egypt': '+20',
+		'Germany': '+49',
+		'India': '+91',
+		'Indonesia': '+62',
+		'Iran': '+98',
+		'Iraq': '+964',
+		'Italy': '+39',
+		'South Korea': '+82',
+		'Maldives': '+960',
+		'Morocco': '+212',
+		'Nigeria': '+234',
+		'Oman': '+968',
+		'Pakistan': '+92',
+		'Qatar': '+974',
+		'Russia': '+7',
+		'Saudi Arabia': '+966',
+		'South Africa': '+27',
+		'Spain': '+34',
+		'Sri Lanka': '+94',
+		'Thailand': '+66'
+	};
+
+	// Function that updates the mobile input value based on the selected country's code
+	function updateMobileInputValue() {
+		const countryCode = countryCodes[countrySelect.value];
+		mobileInput.value = countryCode ? countryCode + ' ' : '';
+	}
+
+	// Listen for changes in the country select element
+	countrySelect.addEventListener('change', updateMobileInputValue);
+
+{}
+let Message=document.getElementById("message");
+	
+	 function openmessage(){
+	 	message.classList.add("open-message");
+	 }
+	 
+	function redirectToHomepage() {
+  window.location.replace("index.html");
+}
+
+	
+
+</script>
+</body>
+
+</html>

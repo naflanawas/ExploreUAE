@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAE</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <link rel="Title icon" href="Images/favicon.ico">
+    <link rel="stylesheet" href="GalleryStyle.css">
+</head>
+<body>
+   <header>
+      <a href="Index.html">
+        <img src="Images/newlogo.png" alt="Explore UAE Logo" class="logo">
+      </a>
+      <nav>
+        <ul>
+         <li><a href="index.html" >Home</a></li>
+         <li><a href="comments.html">Comments</a></li>
+         <li><a href="package.html">Shop</a></li>
+         <li><a href="Quiz.html">Quiz</a></li>
+         <li><a href="web.html">Site Map</a></li>
+         <li><a href="Gallery.html" class="active">Gallery</a></li>
+         <li><a href="StuDet.html">About Us</a></li>
+        </ul>
+      </nav>
+  </header>
+   <div class="labels">
+      <br>
+      <label class="colorleft">Font Size:</label>
+      <button type="button" value="increase" class="increaseFont" style="border-radius: 10px;">
+         A++
+      </button>
+      <button type="button" value="decrease" class="decreaseFont" style="border-radius: 10px;">
+         A--
+      </button>
+      <label class="colorpos"> Background Colour:</label>
+      <button type="button" data-color="grey" onclick="changeBodyBg('Grey');" style="background-color: grey; height: 20px; width: 40px; border-radius: 10px;"></button>
+      <button type="button" data-color="tan" onclick="changeBodyBg('tan');" style="background-color: tan; height: 20px; width: 40px; border-radius: 10px;"></button>
+      <button type="button" data-color="DarkGreen" onclick="changeBodyBg('DarkGreen');" style="background-color: darkgreen; height: 20px; width: 40px; border-radius: 10px;"></button>
+      <button type="button" data-color="color" onclick="RandomColor();" style="opacity: 50%; height: 20px; width: 160px; border-radius: 10px;">Random Colour</button>
+  </div>
+   
+
+  <div class="box">
+    <table> 
+        <tr>
+           <td colspan="2">
+           <h3 class="heading">ACTIVITIES TO DO IN DUBAI</h3>
+           <div id="my_Div" >
+              <!-- <div id="my_Div" onmouseover="changeImage(event)"> -->
+               <img class="imgstyle" height="195" src="Images/Dubai_Arc.jpg" onclick="changeImage(event);img01()" alt="Architecture" />
+               <img class="imgstyle" height="195" src="Images/QudraLake1.jpg" onclick="changeImage(event);img02()" alt="Nature" />
+               <img class="imgstyle" height="195" src="Images/Machboos.jpg" onclick="changeImage(event);img03()" alt="Food"/>
+               <img class="imgstyle" height="195" src="Images/Entertainment.jpeg" onclick="changeImage(event);img04()"alt="Entertainment"/>    
+            </div>
+           </td>         
+       </tr>
+       <tr>
+           <td>
+              <img class="large-image" src="Images/Dubai_Arc.jpg" alt="Burj Khalifa" id="mainimg"/><br>
+           </td>
+           <td>
+            <div class="data" >
+               <h3 id="title">Architecture - Museum of the Future</h3>
+                 <p id="deck">
+                  The Museum of the Future is a concept that envisions a museum that showcases innovative and cutting-edge technology, science, and art. It is designed to provide visitors with an immersive and interactive experience that allows them to explore the latest ideas, innovations, and technologies in a dynamic and engaging way. It also emphasizes sustainability and the environment, featuring exhibits that highlight the latest advancements in green technology and eco-friendly design. The Museum of the Future is an exciting concept that revolutionizes the way we think about museums and the role they play in society.
+                 </p>   
+              </div>
+           </td>    
+       </tr>    
+     </table>
+   </div>  
+     <script>
+
+   // Change font size buttons.
+    $(document).ready(function(){
+         $(".increaseFont,.decreaseFont").click(function(){
+            var type= $(this).val();
+            var curFontSize = $('.data').css('font-size');
+            if(type=='increase'){
+               $('.data').css('font-size', parseInt(curFontSize)+1);
+            } else{
+               $('.data').css('font-size', parseInt(curFontSize)-1);
+            }
+            // alert($('.data').css('font-size'));
+         });
+      });
+
+   // Change backgroundColor-Fixed colours.
+   function changeBodyBg(color){
+      document.body.style.background = color;
+      document.getElementById("heading").style.background = color;
+    }
+
+   //Generating Random Color for background.
+   function RandomColor() {
+   var r, g, b, color;
+   r = Math.floor(Math.random() * 41) + 205;
+   g = Math.floor(Math.random() * 61) + 140;
+   b = Math.floor(Math.random() * 56) + 85;
+   color = "rgb(" + r + "," + g + "," + b + ")";
+   document.body.style.background = color;
+   
+}
+
+   //Change Pragraph for image.
+   function img01(){
+    document.getElementById("title").innerHTML="Architecture - Museum of the Future";
+    document.getElementById("deck").innerHTML =" The Museum of the Future is a concept that envisions a museum that showcases innovative and cutting-edge technology, science, and art. It is designed to provide visitors with an immersive and interactive experience that allows them to explore the latest ideas, innovations, and technologies in a dynamic and engaging way. It also emphasizes sustainability and the environment, featuring exhibits that highlight the latest advancements in green technology and eco-friendly design. The Museum of the Future is an exciting concept that revolutionizes the way we think about museums and the role they play in society. ";
+    }
+   function img02(){
+   document.getElementById("title").innerHTML="Nature - Qudra Lake";
+   document.getElementById("deck").innerHTML = " Qudra Lake is a man-made lake located in the Dubai desert in the United Arab Emirates. It is a popular destination for outdoor activities such as camping, picnicking, bird-watching, and photography. Visitors can rent bicycles or take a leisurely walk on the boardwalk and enjoy a meal while taking in the scenic views. The lake also has 130 man-made lakes designed to attract migratory birds, providing a safe haven for over 170 species of birds. Qudra Lake is a great escape from the bustling city life of Dubai, and a perfect destination for those seeking peace and serenity in a natural setting. ";
+   }
+   function img03(){
+   document.getElementById("title").innerHTML="Food - Machboos";
+   document.getElementById("deck").innerHTML = " Machboos, also known as kabsa, is a traditional rice dish popular in many Middle Eastern countries. It consists of spiced rice, meat (usually chicken or lamb), and vegetables. The rice is cooked with aromatic spices, while the meat is marinated in a blend of spices and then cooked with onions and tomatoes. Vegetables such as carrots, peas, and tomatoes are often added for added flavor and nutrition. It is served with a side of yogurt or a spicy tomato sauce, as well as salad or pickles. Overall, machboos is a delicious and satisfying dish that is enjoyed by many in the Middle East. ";
+   }
+   function img04(){
+   document.getElementById("title").innerHTML="Entertainment - Dubai Aquarium";
+   document.getElementById("deck").innerHTML = " The Dubai Aquarium is one of the largest indoor aquariums in the world and is located in the Dubai Mall. It features a 10 million-liter tank that houses thousands of marine animals, a 48-meter-long underwater tunnel, a Glass Bottom Boat ride, interactive experiences such as the Shark Encounter and the Underwater Zoo, and state-of-the-art facilities and interactive experiences. It is a must-visit destination for those interested in marine life and nature, with its state-of-the-art facilities and interactive experiences providing visitors with a unique and unforgettable experience..";
+   }
+    
+     //On mouse-over and On mouse-out.
+     var images = document.getElementById("my_Div").getElementsByTagName("img");
+       for(var i=0;i<images.length;i++){
+    
+       images[i].onmouseover=function(){
+       this.style.cursor='hand';
+       this.style.borderColor='grey';
+       }
+       
+       images[i].onmouseout=function(){
+       this.style.cursor='pointer';
+       this.style.borderColor='white';
+       }
+    }
+
+    //Change image event.
+    function changeImage(event){
+    event=event || window.event;
+    var targetElement= event.target|| event.srcElement;        
+    document.getElementById("mainimg").src=targetElement.getAttribute("src");        
+    } 
+</script>
+<div class="editor">
+   <a href="pageeditorAaysha.html">Page Editor</a>
+</div>
+ <footer>
+   <a href="" id="go-to-top">
+     <img src="Images/move-up.png" alt="move up icon">
+     <p><span>Go to Top</span></p>
+   </a>
+   <div class="logo">
+     <img src="Images/logo-footer.png" alt="Your logo">
+   </div>
+   <p>&copy; 2023 All rights reserved.</p>
+ </footer>
+</body>
+</html>

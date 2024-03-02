@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore UAE - Comments</title>
+  <link rel="stylesheet" href="external.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    /*style of the form questions*/
+		 label {
+			font-size: 16px;
+			font-weight: 600;
+			margin-bottom: 5px;
+		}
+		/*position of the thankyou messege  */
+    .container{
+      float: right;
+      margin-top: 13px;
+    }
+    /*form layout and style*/
+    form {
+      margin: 10px auto;
+      max-width: 600px;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px gray;
+    }
+    /*title position*/
+    h1 {
+      text-align: center;
+    }
+    /*name and email input field style*/
+    .form-container {
+      display: block;
+      width: 95%;
+      height: 30px;
+      padding: 8px 12px;
+      border-radius: 5px;
+      background-color: #fff;
+      border: 0.5px solid #ced4da;
+
+    }
+    /*rating field style*/
+    input[type="radio"] {
+      display: inline-block;
+      margin: 10px;
+    }
+    /*text area width height and style*/
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: rgb(255, 255, 255);
+      font-size: 16px;
+      line-height: 24px;
+    }
+    /*drop down menu style*/
+    select {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: #fff;
+    }
+    /*submit and clear button style*/
+    button[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    button[type="submit"]:hover {
+
+      transform: scale(1.05);
+    }
+
+    button[type="reset"] {
+      background-color: red;
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    button[type="reset"]:hover {
+
+      transform: scale(1.05);
+    }
+/*page editor button style*/
+    .editor {
+      background-color: #fff;
+      padding: 5px;
+      width: 10%;
+      margin-left: 86%;
+      border-radius: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .editor:hover,
+    .editor a:hover {
+      background-color: #000000;
+      color: white;
+    }
+
+    .editor a {
+      text-decoration: none;
+      color: #000000;
+    }
+    /*error displaying container style */
+    .errorcontainer {
+      margin: 10px 0;
+      background-color: #ff0000;
+      color: #ffffff;
+      padding: 10px;
+      width: 95%;
+      margin-left: 2px;
+    }
+/*error messege position*/
+    .errorcontainer h5 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="newlogo.png" alt="Logo">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="comments.html" class="active">Comments</a></li>
+        <li><a href="package.html">Shop</a></li>
+        <li><a href="Quiz.html">Quiz</a></li>
+        <li><a href="web.html">Site Map</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="StuDet.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <br><br>
+  <form id="comments-form" method="post" enctype="text/plain" action="mailto:salman.faraj06@gmail.com "
+    onsubmit="return validateForm() && showThankYouMessage() ">
+    <h1 class="title">FeedBack </h1>
+    <label  for="name">Name *</label>
+    <input type="text" name="Name " id="name" class="form-container" placeholder="Enter your name">
+    <br>
+    <div class="errorcontainer" id="name-error" style="display: none">
+      <h5>Please enter your name</h5>
+    </div>
+    <label for="email">Email *</label>
+    <input type="text" name="Email address " id="email" class="form-container" placeholder="Enter your email">
+    <br>
+    <div class="errorcontainer" id="email-error" style="display: none">
+      <h5>Please enter an email address</h5>
+    </div>
+    <div class="rating" >
+    <h5> How satisfied are you with our website ? (0-10) </h5>
+    <input type="radio" name="Rating " value="0" required> 0
+    <input type="radio" name="Rating " value="1"> 1
+    <input type="radio" name="Rating " value="2"> 2
+    <input type="radio" name="Rating " value="3"> 3
+    <input type="radio" name="Rating " value="4"> 4
+    <input type="radio" name="Rating " value="5"> 5
+    <input type="radio" name="Rating " value="6"> 6
+    <input type="radio" name="Rating " value="7"> 7
+    <input type="radio" name="Rating " value="8"> 8
+    <input type="radio" name="Rating " value="9"> 9
+    <input type="radio" name="Rating " value="10"> 10 <br>
+  </div>
+    <label for="reason">what is the reason for your rating ?</label><br>
+    <textarea id="reason" name="Reason for the rating " rows="5" cols="50" ></textarea><br><br>
+    <div class="dropmenu">
+      <label for="favourite-category">
+        Out of the 4 categories what was your favourite ?
+      </label><br><br>
+      <select id="favourite-category" name="Favourite category ">
+        <option value="" disabled selected>Please select</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Food">Food</option>
+        <option value="Nature">Nature</option>
+        <option value="Architecture">Architecture</option>
+      </select><br><br>
+
+      <label for="favourite-category">
+        How did you complete this task today ?
+      </label><br><br>
+      <select id="method" name="Method of completion">
+        <option value="" disabled selected>Please select</option>
+        <option value="phone">Phone</option>
+        <option value="website">Website</option>
+        <option value="webchat">Webchat</option>
+        <option value="social media">Social Media</option>
+        <option value="email">Email</option>
+      </select><br><br>
+    </div>
+    <div class="container" id="thank-you-container" style="display:none;">
+      <h2>Thank you for your response!</h2>
+      <p>We appreciate your feedback.</p>
+    </div>
+    <button type="submit" value="submit">Submit</button>
+    <button type="reset" value="clear">Clear</button>
+  </form>
+  <div class="editor">
+    <a href="editorsalman.html">
+      <h3>Editor</h3>
+    </a>
+  </div>
+  <footer>
+    <a href="" id="go-to-top">
+      <img src="move-up.png" alt=" move up icon">
+      <p><span>Go to Top</span></p>
+    </a>
+    <div class="logo">
+      <img src="logo-footer.png" alt="Your logo">
+    </div>
+    <p>&copy; 2023 All rights reserved.</p>
+  </footer>
+  <script> /*function to display a thankyou messege upon submission*/
+    function showThankYouMessage() {
+      var container = document.getElementById("thank-you-container");
+      container.style.display = "block";
+    }
+
+    function validateForm() { /*function to display a error mesege container if name and email isnt filled */
+      var nameInput = document.getElementById("name");
+      var errorContainer = document.getElementById("name-error");
+      if (nameInput.value === "") {
+        errorContainer.style.display = "block";
+        return false;
+      }
+
+      var emailInput = document.getElementById("email");
+      var errorContainer = document.getElementById("email-error");
+      if (emailInput.value === "") {
+        errorContainer.style.display = "block";
+        return false;
+      }
+      return true;
+    }
+  </script>
+
+</body>
+
+</html>

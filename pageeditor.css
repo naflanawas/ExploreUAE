@@ -1,0 +1,19 @@
+.pg {
+    background-color: #fff;
+    padding: 5px;
+    width: 10%;
+    margin-left: 86%;
+    border-radius: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .pg:hover,.pg a:hover {
+    background-color: #000000;
+    color: white;
+  }
+
+  .pg a {
+    text-decoration: none;
+    color: #000000;
+  }

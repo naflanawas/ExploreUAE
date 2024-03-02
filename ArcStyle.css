@@ -1,0 +1,161 @@
+header  {
+    position: sticky;
+    top: 0%;
+    /* width: 96.5%; */
+    }
+    
+    nav {
+    max-width: 100%;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5); /* Add a semi-transparent background color to the navigation bar */
+    margin-top: -63px;
+    }
+    
+    nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    }
+    
+    nav ul li {
+    display: inline-block;
+    }
+    
+    nav ul li a {
+    display: block;
+    padding:20px 20px;
+    margin: 0%;
+    color: white;
+    text-decoration: none;
+    }
+    nav a:hover {
+    background-color: #000000;
+    border-radius: 5px;
+    }
+    .active {
+    border-bottom: 3px solid white;
+    }
+    
+    header img{
+    width: 150px;
+    height: 50px;
+    position: sticky;
+    padding: 5px 40px;
+    z-index: 1;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      /* fix alignment issue */
+      margin: 10px 20px;
+    }
+    .card {
+      width: 45%;
+      margin-bottom: 20px;
+      margin-top: 30px;
+      border-radius: 5px;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .card h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .card p {
+      font-size: 18px;
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .sidenav{
+      margin-left: 20px;
+    }
+
+    .sidenav a {
+      padding: 10px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #ffffff;
+
+    }
+
+    .sidenav a:hover {
+      color: #2409ad;
+    }
+
+    .editor {
+      background-color: #fff;
+      padding: 5px;
+      width: 10%;
+      margin-left: 86%;
+      border-radius: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .editor:hover ,.editor a:hover {
+      background-color: #000000;
+      color: white;
+    }
+
+    .editor a {
+      text-decoration: none;
+      color: #000000;
+    }
+
+    footer {
+  margin-top: 40px;
+  background-color: #000000;
+  padding: 25px;
+  text-align: center;
+}
+
+footer .logo {
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+footer img {
+  max-width: 100px;
+}
+
+footer i {
+  color: white;
+  font-size: 20px;
+}
+#go-to-top {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  float: left;
+}
+#go-to-top img {
+  width: 50px;
+  height: 50px;
+}
+body{
+  background-image: url('Images/architecturebg.jpg');
+  background-size:cover;
+  backdrop-filter: blur(8px);
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=\, initial-scale=1.0" />
+	<title>Hello UAE</title>
+	<link rel="icon" type="image/x-icon" href="favi.ico">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Trebuchet MS';
+			background:#000000;
+			color: azure;
+			overflow: hidden;
+		}
+
+		.center {
+			display: flex;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+		}
+
+		.ring {
+			position: absolute;
+			width: 500px;
+			height: 500px;
+			border-radius: 50%;
+			animation: ring 3s linear infinite;
+		}
+
+		@keyframes ring {
+			0% {
+				transform: rotate(0deg);
+				box-shadow: 1px 5px 2px #0ca2f9;
+			}
+
+			50% {
+				transform: rotate(180deg);
+				box-shadow: 1px 5px 2px #a84ef0;
+			}
+
+			100% {
+				transform: rotate(360deg);
+				box-shadow: 1px 5px 2px #2d9094;
+			}
+		}
+
+		.ring::before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			box-shadow: 0 0 5px rgba(255, 255, 255, .3);
+			border-radius: 50%;
+
+		}
+
+		span {
+			color: #fae6e6;
+			font-size: 25px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			line-height: 200px;
+			animation: text 4s ease-in-out infinite;
+
+		}
+
+		@keyframes text {
+			0% {
+				color: black;
+			}
+
+		}
+
+		p {
+			line-height: 20px;
+			letter-spacing: 1px;
+		}
+
+		.name {
+			text-align: center;
+			margin-bottom: 10%;
+			visibility: visible;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="center">
+		<div class="ring"></div>
+		<span>
+			<h3><b>WELCOME TO EXPLORE UAE!</b></h3>
+			<p>Meet the team:<br><br>
+				Nafla Nawas<br><br>
+				Salman Faraj<br><br>
+				Samry Mohamed<br><br>
+				Aaysha Mohamed</p>
+		</span>
+	</div>
+	<script>
+		setTimeout(function () {
+			window.location.href = "index.html";
+		}, 4000);
+	</script>
+</body>
+
+
+</html>
+		  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

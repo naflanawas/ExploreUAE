@@ -1,0 +1,194 @@
+header  {
+    position: sticky;
+    top: 0;
+    }
+
+    nav {
+    max-width: 100%;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5); /* Add a semi-transparent background color to the navigation bar */
+    margin-top: -63px;
+    }
+
+    nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    }
+
+    nav ul li {
+    display: inline-block;
+    }
+
+    nav ul li a {
+    display: block;
+    padding:20px 20px;
+    margin: 0%;
+    color: white;
+    text-decoration: none;
+    }
+    nav a:hover {
+    background-color: #000000;
+    border-radius: 5px;
+    }
+    .active {
+    border-bottom: 3px solid white;
+    }
+
+    header img{
+    width: 150px;
+    height: 50px;
+    position: sticky;
+    padding: 5px 40px;
+    z-index: 1;
+    }
+
+    body{
+    background-color:rgba(49, 14, 14);
+    background-image: url(Images/camel.jpg);
+    /* height: 55%;  */
+    /* width: 100%; */
+    /* background-position: relative; */
+    background-repeat: no-repeat;
+    background-size: cover;              
+    }
+
+     body, html {
+    height: 100%;
+    } 
+
+    button {
+    width: 110px;
+    height: 50px;
+   }
+    
+
+    footer {
+    margin-top: 40px;
+    background-color: #000000;
+    padding: 25px;
+    text-align: center;
+    }
+
+    footer .logo {
+    margin-bottom: 20px;
+    }
+
+    footer p {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    }
+
+    footer img {
+    max-width: 100px;
+    }
+
+    footer i {
+    color: white;
+    font-size: 20px;
+    }
+
+     #go-to-top {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    float: left;
+    }
+
+    #go-to-top img {
+    width: 50px;
+    height: 50px;
+    } 
+
+    #sitemap g:hover {  
+    cursor: pointer;
+    }
+
+   .g:hover {
+    fill: rgb(123, 3, 3);
+    }
+
+    #sitemap g:hover {  
+    cursor: pointer;
+    }
+
+    .label:hover {
+    fill: grey;
+    }
+
+    .active {
+    /* text-decoration: underline; */
+    background-color: #000000;
+   }
+    
+
+   .editor {
+    background-color: #fff;
+    padding: 5px;
+    width: 10%;
+    margin-left: 84%;
+    border-radius: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    bottom: 2%;
+    position: fixed;
+  }
+
+    .editor:hover ,.editor a:hover {
+    background-color: #000000;
+    color: white;
+  }
+
+    .editor a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .banner {
+    background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url(Images/SKY.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 2rem;
+    background-attachment: fixed;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Trebuchet MS';
+  }
+
+.banner .content span {
+  font-size: 2rem;
+  color: var(--theme);
+}
+
+.banner .content h3 {
+  font-size: 4rem;
+  color: var(--text-color-1);
+  margin-top: 1rem;
+}
+
+.banner .content p {
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1.4rem;
+  color: var(--text-color-2);
+  line-height: 2;
+}
+.credit {
+  background: var(--bg-color-1);
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem 1rem;
+  color: var(--text-color-2);
+}
+
+.credit a {
+  color: var(--theme);
+}
+
+.box{
+  color:whitesmoke;
+  font-family: 'Trebuchet MS';
+}

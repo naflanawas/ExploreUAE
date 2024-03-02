@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore UAE</title>
+  <link rel="stylesheet" href="external.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+
+    .container {
+      display: flex;
+      /*to allign the cards in a row*/
+      justify-content: space-between;
+      margin: 40px 3% 0 3%;
+      /*margin for top right bottom and left*/
+    }
+
+    .card {
+      width: 24%;
+      height: 550px;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /*10px  blur radius of the */
+      border-radius: 8px;
+      overflow: hidden;
+    }
+      /*sets the image size the half of the category card*/
+    .card img {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+      border-radius: 5px 5px 0px 0px;
+    }
+    /* font specification of category header*/
+    .card h3 {
+      margin: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+    /*removes the underline of the anchor tag*/
+    .card a {
+      text-decoration: none;
+    }
+    /* font specification of card paragraph tags*/
+    .card p {
+      margin: 0 20px 20px 20px;
+      font-size: 17px;
+      color: #666;
+    }
+      /*adds a hover effect and transforms the card */
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
+      transform: scale(1.05);
+
+    }
+    /*sets the about explopre uae section's look*/
+    .content-container {
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 30px;
+      margin: 3%;
+    }
+    /* header specification of the about explore uae*/
+    .content-container h2 {
+      margin-top: 0;
+      font-size: 45px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    /*paragraph tags's specification of the explore uae section*/
+    .content {
+      font-size: 24px;
+      color: #666;
+      line-height: 1.5;
+      text-align: justify;
+    }
+    /*sets the size of the hero section image*/
+    .mainpic img {
+      max-width: 100%;
+      height: 100%;
+      margin-top: -3px;
+    }
+    /* sets the video position to center and the below text to white */
+    .vcard {
+      text-align: center;
+      color: #fff;
+    }
+    /*video sections title's specification*/
+    .vcard-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #000000;
+    }
+    /*play pause button specification*/
+    button {
+      display: block;
+      margin: auto;
+      margin-bottom: 5px;
+      background-color: #00000053;
+      color: white;
+      padding: 11px 8px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    /*hover effect for play pause button*/
+    button:hover{
+      transform: scale(1.05);
+    }
+    /*video width, height and adds a curve */
+    #video1 {
+      margin: 10px 10px;
+      width: 65%;
+      height: 55%;
+      border-radius: 5px;
+    }
+    /*catagories title specification*/
+    #categories{
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #ffffff;
+      max-width: 100%;
+    }
+    #categories h2{
+      font-weight: bolder;
+      text-decoration-line:underline;
+    }
+    /*in page mini navigation bar specification*/
+    .sidenav {
+      margin-top: -5px;
+      text-align: center;
+      padding: 20px;
+      background-color: #D5D0BA;
+    }
+
+    .sidenav a {
+      padding: 6px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #000000;
+      display: inline-block;
+      font-weight: bold;
+
+    }
+
+    .sidenav a:hover {
+      color: #2409ad;
+      transform: scale(1.05);
+    }
+    /*page editor button specification*/
+    .editor {
+      background-color: #fff;
+      padding: 5px;
+      width: 10%;
+      margin-left: 86%;
+      border-radius: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .editor:hover ,.editor a:hover {
+      background-color: #000000;
+      color: #ffffff;
+    }
+    .editor a {
+      text-decoration: none;
+      color: #000000;
+    }
+
+  </style>
+</head>
+<body>
+  <header> 
+    <a href="index.html">
+      <img src="newlogo.png" alt="Explore UAE Logo" class="logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="comments.html">Comments</a></li>
+        <li><a href="package.html">Shop</a></li>
+        <li><a href="Quiz.html">Quiz</a></li>
+        <li><a href="web.html">Site Map</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="StuDet.html">About Us</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <div class="mainpic">
+    <img src="Dubai-frame.jpeg" alt="Dubai Frame">
+  </div>
+
+  <div class="sidenav">
+    <a href="#video"> &raquo; Dubai in a glimpse</a>
+    <a href="#categories">&raquo; Explore Categories</a>
+    <a href="#about-section">&raquo; Brief About Us</a>
+  </div>
+  <br><br>
+  <!-- code reference w3 school -->
+  <div class="vcard" id="video">
+    <div class="vcard-body">
+      <h3 class="vcard-title">Dubai in a Glimpse</h3>
+      <button onclick="playPause()">&#x23F5;/&#x23F8;</button>
+      <div>
+        <video id="video1">
+          <source src="Dubai_video.mp4" type="video/mp4">
+        </video>
+        <p>Video credits Harry Tarbuck(Youtube)</p>
+      </div>
+    </div>
+  </div>
+  <div id="categories">
+    <h2>Explore Catagories</h2>
+  </div>
+  
+  <div class="container">
+    <div class="card">
+      <a href="contentfinal.html">
+      <img src="entertainment-unsplash.jpg" alt="entertainment">
+      <h3>Entertainment</h3>
+    </a>
+      <p>
+        From the bustling streets of Dubai to the serene deserts of Abu Dhabi,
+        the UAE is a melting pot experiences. With world-class theme parks,
+        shopping malls, adventure activities, the entertainment options in the
+        UAE are endless.
+      </p>
+    </div>
+    <div class="card">
+      <a href="Food.html">
+      <img src="food-dubai.jpg" alt="food">
+      <h3>Food</h3>
+    </a>
+      <p>
+        If you're a foodie, you'll be delighted by the diverse culinary
+        offerings of the UAE. From traditional Emirati dishes to international
+        cuisine, the country's restaurants and cafes serve up an array of
+        delicious and unique flavors.
+      </p>
+    </div>
+    <div class="card">
+      <a href="nature.html">
+        <img src="nature-dubai.jpg" alt="nature">
+        <h3>Nature</h3>
+      </a>
+      <p>
+        Nature enthusiasts will be awe-inspired by the UAE's breathtaking
+        landscapes, which range from rugged mountains and rolling sand dunes
+        to crystal-clear waters and lush greenery.
+      </p>
+    </div>
+    <div class="card">
+      <a href="architecture.html">
+      <img src="architecture-dubai.jpg" alt="architecture">
+      <h3>Architecture</h3>
+    </a>
+      <p>
+        The UAE is a land of architectural wonders, boasting some of the most
+        stunning and innovative buildings in the world. The UAE's architecture
+        is a blend of traditional Arab designs and cutting-edge modern
+        technology.
+      </p>
+    </div>
+  </div>
+
+  <div class="content-container" id="about-section">
+    <h2>About Explore UAE</h2>
+    <div class="content">
+      <p>
+        Welcome to ExploreUAE, your ultimate guide to the United Arab
+        Emirates! From the bustling city of Dubai to the peaceful oasis of Abu
+        Dhabi, the UAE is a land of wonders waiting to be discovered. Whether
+        you're a first-time visitor or a seasoned traveler, ExploreUAE is here
+        to help you make the most of your stay.
+      </p>
+      <p>
+        Our website is packed with useful information about the UAE's top
+        attractions, best restaurants, and must-see sights. We offer insider
+        tips on the best hotels, tours, and activities. as well as detailed
+        guides on the country's history and culture. Whether you're interested
+        in shopping at the world's largest mall, skiing in the desert, or
+        exploring ancient forts, we've got you covered.
+      </p>
+      <p>
+        So what are you waiting for? Start exploring the UAE today with
+        ExploreUAE. Let us help you create unforgettable memories and discover
+        the hidden gems of this incredible country.
+      </p>
+    </div>
+  </div>
+  <div class="editor">
+    <a href="editorsalman.html">
+      <h3>Editor</h3>
+    </a>
+  </div>
+  
+ 
+
+  <script>
+    //https://www.w3schools.com/html/html5_video.asp
+    var myVideo = document.getElementById("video1");
+
+    function playPause() {
+      if (myVideo.paused)
+        myVideo.play();
+      else
+        myVideo.pause();
+    }
+  </script>
+
+  <footer>
+    <a href="" id="go-to-top">
+      <img src="move-up.png" alt=" move up icon">
+      <p><span>Go to Top</span></p>
+    </a>
+    <div class="logo">
+      <img src="logo-footer.png" alt="Your logo">
+    </div>
+    <p>&copy; 2023 All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <title>Samry Mohamed</title>
+    <link rel="Title icon" href="Images/favicon.ico" />
+    <link rel="stylesheet" href="PageEditorStyle.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="Index.html">
+          <img src="Images/newlogo.png" alt="Explore UAE Logo" />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="card">
+        <div class="card-bio">
+          <div class="img-wrapper">
+            <img src="Images/Stu3.jpg" alt="Person" />
+          </div>
+          <div class="person-info">
+            <h3>Samry Mohamed</h3>
+            <p>Chose <strong>Student Role Three</strong> as the task.</p>
+          </div>
+          <button class="card-btn">
+            <span class="card-btn-contact">View Tasks</span>
+            <i class="fas fa-angle-up"></i>
+          </button>
+        </div>
+        <div class="card-contact">
+          <h4>View Tasks</h4>
+        </div>
+        <div class="task one">
+          <div class="icon-wrapper">
+            <i class="fas fa-thin fa-code"></i>
+          </div>
+          <div class="contact-details">
+            <a href="Quiz.html">
+              <h4>Quiz Page</h4>
+              <p>Developed the quiz page contains 10 questions with timer.</p>
+            </a>
+          </div>
+        </div>
+        <div class="task two">
+          <div class="icon-wrapper">
+            <i class="fas fa-thin fa-sitemap"></i>
+          </div>
+          <div class="contact-details">
+            <a href="StuDet.html">
+              <h4>About us page</h4>
+              <p>
+                Created an about us page to show student details with their
+                role.
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="task three">
+          <div class="icon-wrapper">
+            <i class="fas fa-thin fa-code"></i>
+          </div>
+          <div class="contact-details">
+            <a href="Food.html">
+              <h4>Content Page - Food</h4>
+              <p>
+                Edited the food page with variety of food people need to try in
+                Dubai.
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelector(".card-btn").addEventListener("click", () => {
+        document.querySelector(".container").classList.toggle("change");
+      });
+    </script>
+  </body>
+</html>

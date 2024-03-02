@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>shopping_Cart</title>
+    <link rel="stylesheet" type="text/css" href="external.css">
+    <link rel="icon" type="image/x-icon" href="favi.ico">
+    <link rel="stylesheet" href="pageeditor.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(final.jpg);
+            backdrop-filter: none;
+            background-size: cover;
+            
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            margin-left: 3.5%;
+            margin-right: 3.5%;
+        }
+
+        .table-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            /*used to create flexible containers */
+            padding: 100px;
+            flex-wrap: wrap;
+            list-style-type: disc;
+            table-layout: fixed;
+
+        }
+
+        .table-item {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 350px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer;
+            transition: all 0.4s;
+            table-layout: fixed;
+            background-color: rgb(255, 255, 255);
+            background-size: cover;
+        }
+
+        .table-item:hover {
+            transform: scale(1.1);
+            border-radius: 10px;
+
+        }
+
+        .table-item img {
+            width: 100%;
+            border-radius: 5px 5px 0px 0px;
+            height: 200px;
+            object-fit: cover;
+            opacity: 1;
+
+
+        }
+
+
+        .heading {
+            margin: 10px;
+        }
+
+        .plan {
+            color: rgb(156, 83, 83);
+            text-align: center;
+        }
+
+        article {
+            text-align: center;
+            margin: 20px 8px;
+        }
+
+        ul {
+            list-style-position: inside;
+        }
+
+        li {
+            vertical-align: middle;
+            text-align: justify;
+        }
+
+        .cart {
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #000000;
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: #ffffff;
+            margin: auto;
+            display: flex;
+            margin-bottom: 0%;
+        }
+
+        .btn:hover {
+            background-color: rgb(100, 99, 96);
+            color: #ffffff;
+            border: none;
+        }
+
+        .checkout {
+            margin: 50px;
+            padding: 20px;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            background-color: #ffffff;
+            height: 200px;
+            width: 300px;
+            margin-left: auto;
+            margin-right: 8%;
+
+        }
+
+        .checkout h2 {
+            margin-bottom: 20px;
+        }
+
+        .checkout ul {
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+
+        .checkout li {
+            margin-bottom: 5px;
+        }
+
+        .checkout-total {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        header img {
+            width: 200px;
+            margin-top: 10px;
+        }
+
+        .buy-now {
+            background-color: rgb(22, 179, 22);
+            padding: 8px 10px;
+            border-radius: 5px;
+            border-style: none;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            color: #ffffff;
+
+        }
+
+        .reset {
+            background-color: red;
+            padding: 8px 18px;
+            border-radius: 5px;
+            border-style: none;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            color: #ffffff;
+        }
+        .checkout button:hover{
+            transform: scale(1.05);
+        }
+        .checkout button{
+            font-size: medium;
+        }
+    </style>
+    </head>
+    <body>
+    <header>
+        <a href="index.html">
+            <img src="newlogo.png" alt="Explore UAE Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="comments.html">Comments</a></li>
+                <li><a href="package.html" class="active">Shop</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+                <li><a href="web.html">Site Map</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="StuDet.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- package-01 -->
+
+    <div class="table-container">
+        <div class="table-item">
+            <img src="package1.jpg" alt="package-01">
+            <h2 class="heading">PACKAGE-01</h2>
+            <h3 class="plan">Dubai Deluxe Shopping Package </h3>
+            <article class="content">
+                <p><b>Package includes:</b></p>
+                <ul>
+                    <li>Private city tour of iconic sights such as the Burj Khalifa, Dubai Fountain, and Dubai Mall
+                    </li>
+                    <li>Personal shopping tour of famous malls including the Dubai Mall, Mall of the Emirates, and
+                        traditional souks</li>
+                    <li>Private transportation, English-speaking guide, and daily breakfast buffet</li></ul>
+                    <h4><b>Key speciality:</b></h4>
+                    <p>This package is perfect for shopping enthusiasts who want to experience the luxurious side
+                        of
+                        Dubai.</p><br>
+                
+                <h2><b>Price per person:</b>$250</h2><br><br><br><br><br>
+            </article>
+            <button class="btn" onclick="addToCart('Package 1','250')">Add to Cart</button>
+
+
+
+
+        </div>
+        <!-- package-02 -->
+
+        <div class="table-item">
+            <img src="package2.jpg" alt="package-02">
+            <h2 class="heading">PACKAGE-02</h2>
+            <h3 class="plan">Abu Dhabi Cultural Tour Package </h3>
+            <article class="content">
+                <p><b>Package includes:</b></p>
+                <ul>
+                    <li> Visit to the stunning Sheikh Zayed Grand Mosque, the Qasr Al Watan Presidential Palace, and
+                        the
+                        Louvre Abu Dhabi museum</li>
+                    <li>Boat ride through the mangrove forests of the Al Noor Island Nature Reserve</li>
+                    <li>Private transportation, English-speaking guide, and daily breakfast buffet</li> </ul>
+                    <h4><b>Key speciality:</b></h4>
+                    <p>This package is ideal for history and culture lovers who want to explore the rich heritage
+                        of
+                        Abu Dhabi.</p><br><br>
+               
+                <h2><b>Price per person:</b>$200</h2><br><br><br><br>
+            </article><br>
+            <button class="btn" onclick="addToCart('Package 2','200')">Add to Cart</button>
+
+        </div>
+        <!-- package-03 -->
+
+        <div class="table-item">
+            <img src="package3.jpg" alt="package-03">
+            <h2 class="heading">PACKAGE-03</h2>
+            <h3 class="plan">Fujairah Adventure Package</h3>
+            <article class="content">
+                <p><b>Package includes:</b></p>
+                <ul>
+                    <li>Beachfront resort stay in Fujairah with clear waters and stunning mountain scenery</li>
+                    <li>Variety of water sports including snorkeling and diving</li>
+                    <li>Mountain safari to explore the Hajar Mountains and visit to the Al Bidyah Mosque, the oldest
+                        mosque in the UAE</li>
+                    <li>Private transportation, English-speaking guide, and daily breakfast buffet</li></ul>
+                    <h4><b>Key speciality:</b></h4>
+                    <p>This package is perfect for adventure seekers who want to experience the natural beauty of
+                        Fujairah.</p>
+                
+                <h2><b>Price per person:</b>$600</h2><br><br>
+
+            </article><br><br><br>
+            <button class="btn" onclick="addToCart('Package 3','450')">Add to Cart</button>
+        </div>
+    </div>
+    <!-- package-04 -->
+
+    <div class="row">
+        <div class="table-item">
+            <img src="package4.jpg" alt="package-04">
+            <h2 class="heading">PACKAGE-04</h2>
+            <h3 class="plan">Sharjah Culture and Nature Package </h3>
+            <article class="content">
+                <p><b>Package includes:</b></p>
+                <ul>
+                    <li>Visit to the Sharjah Museum of Islamic Civilization, the Sharjah Art Museum, and the Sharjah
+                        Heritage Area</li>
+                    <li>Boat ride through the mangrove forests of the Al Noor Island Nature Reserve</li>
+                    <li>Private transportation, English-speaking guide, and daily breakfast buffet</li></ul>
+                    <h4><b>Key speciality:</b></h4>
+                    <p>This package is ideal for those who want to explore the cultural heritage of Sharjah and enjoy
+                        the beauty of nature.</p><br>
+                
+                <h2><b>Price per person:</b>$600</h2><br><br><br><br>
+            </article>
+            <button class="btn" onclick="addToCart('Package 4','600')">Add to Cart</button>
+
+        </div>
+        <!-- package-05 -->
+
+        <div class="table-item">
+            <img src="package5.jpeg" alt="package-05">
+            <h2 class="heading">PACKAGE-05</h2>
+            <h3 class="plan">Dubai Desert Adventure Package </h3>
+            <article class="content">
+                <p><b>Package includes:</b></p>
+                <ul>
+                    <li> Desert safari with dune bashing, camel riding, and sandboarding</li>
+                    <li>Visit to a Bedouin-style camp for a traditional dinner and entertainment</li>
+                    <li>Hot air balloon ride over the desert at sunrise</li>
+                    <li>Private transportation, English-speaking guide, and daily breakfast buffet</li></ul>
+                    <h4><b>Key speciality:</b></h4>
+                    <p> This package is perfect for thrill-seekers who want to experience the adventure of the desert
+                        in Dubai.</p>
+                
+                <h2><b>Price per person:</b>$350</h2><br><br><br><br>
+            </article>
+            <button class="btn" onclick="addToCart('Package 5','350')">Add to Cart</button>
+
+        </div>
+        <!-- package-06 -->
+
+        <div class="table-item">
+            <img src="package6.jpg" alt="package-06">
+            <h2 class="heading">PACKAGE-06</h2>
+            <h3 class="plan">Dubai Helicopter Tour Package </h3>
+            <article class="content">
+                <p><b>Package includes:</b></p>
+                <ul>
+                    <li>offers stunning aerial views of the city's iconic landmarks, such as the Burj Khalifa, Dubai
+                        Marina, and Palm Jumeirah</li>
+                    <li> private helicopter ride with a professional pilot and a photo opportunity</li> </ul>
+                    <h4><b>Key speciality:</b></h4>
+                    <p> This package is the opportunity to experience Dubai's skyline from a unique perspective.</p><br><br><br><br>
+               
+                <h2><b>Price per person:</b>$150</h2><br><br><br><br>
+            </article>
+            <button class="btn" onclick="addToCart('Package 6','150')">Add to Cart</button>
+        </div>
+    </div>
+    <div class="checkout">
+        <h2>Shopping cart</h2>
+        <div class="cart-items"></div>
+        <div class="total"></div>
+        <button class="buy-now">Buy Now</button>
+        <button class="reset" onclick="resetCart()">Reset</button>
+    </div>
+
+    <script>
+        let cart = [];
+
+        function addToCart(packageName, price) {
+            cart.push({ name: packageName, price: price });
+            alert(packageName + " has been added to the cart.");
+
+            // update the cart items display
+            updateCartItems();
+        }
+
+        function updateCartItems() {
+            let cartItemsDiv = document.querySelector(".cart-items");
+            cartItemsDiv.innerHTML = "";
+
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = "<p>Your cart is empty.</p>";
+                return;
+            }
+            let total = 0;
+            for (let i = 0; i < cart.length; i++) {
+                let cartItem = cart[i];
+                let price = parseInt(cartItem.price);
+                let cartItemDiv = document.createElement("div");
+                cartItemDiv.textContent = cartItem.name + " - $" + price;
+                cartItemsDiv.appendChild(cartItemDiv);
+                total += price;
+            }
+
+            let totalDiv = document.querySelector(".total");
+            totalDiv.textContent = "Total:" + total;
+        }
+
+        function resetCart() {
+            cart = [];
+            updateCartItems();
+            total = 0;
+            document.querySelector(".total").textContent = "Total: $" + total;
+        }
+
+        function buyNow() {
+            let total = 0;
+            for (let i = 0; i < cart.length; i++) {
+                let cartItem = cart[i];
+                total += cartItem.price;
+            }
+
+            // Redirect to checkout page with total price as query parameter
+            window.location.href = 'Checkout.html?total=' + total;
+        }
+
+        // attach event listeners to buttons
+        let addToCartButtons = document.querySelectorAll(".add-to-cart");
+        for (let i = 0; i < addToCartButtons.length; i++) {
+            let button = addToCartButtons[i];
+            button.addEventListener("click", function () {
+                let packageName = button.getAttribute("data-package-name");
+                let price = parseFloat(button.getAttribute("data-price"));
+                addToCart(packageName, price);
+            });
+        }
+
+        let resetButton = document.querySelector(".reset");
+        resetButton.addEventListener("click", resetCart);
+
+        let buyNowButton = document.querySelector(".buy-now");
+        buyNowButton.addEventListener("click", buyNow);
+    </script>
+<div class="pg">
+    <a href="pg.html">
+      <h3>Page editor</h3>
+    </a>
+  </div>
+  <footer>
+    <div>
+        <div class="logo">
+            <img src="logo-footer.png" alt="Your logo">
+        </div>
+        <div>
+            <p>&copy; 2023 All rights reserved.</p>
+        </div>
+        </div>
+</footer>
+
+</body>
+
+
+</html>
